@@ -30,11 +30,19 @@ $(function() {
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
-  
+      var state = $("#burgergif").attr("data-state");
       var newBurger = {
         name: $("#ca").val().trim(),
         devoured: false
       };
+
+      if (state === "still") {
+        $("#burgergif").attr("src", $("#burgergif").attr("data-animate"));
+        $("#burgergif").attr("data-state", "animate")
+      } else {
+        $("#burgergif").attr("src", $("#burgergif").attr("data-still"));
+        $("#burgergif").attr("data-state", "still")
+      }
   
       // Send the POST request.
       $.ajax("/api/burgers", {

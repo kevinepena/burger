@@ -1,10 +1,8 @@
-<h1 class="center">Make A Burger!</h1>
-
 <div class="row">
-
+  <h1 class="center">Make A Burger!</h1>
   <div class="col s4">
     <div id="notDevoured">
-      <h2>Not Devoured!</h2>
+      <h3>Not Devoured!</h3>
       <ul>
         {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
       </ul>
@@ -20,26 +18,23 @@
 
   <div class="col s4">
     <div id="devoured"></div>
-      <h2>Devoured!</h2>
-      <ul>
-        {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
-      </ul>
-    </div>
+    <h3>Devoured!</h3>
+    <ul>
+      {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
+    </ul>
   </div>
+</div>
 
 </div>
 
 
-
-
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
+<div class="row">
+  <h3>Add a Burger</h3>
+  <div class="col s11">
     <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <input class="input-field" type="text" id="ca" name="name">
   </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+  <div class="col s1">
+    <button id="subButton" class="waves-effect waves-light btn brown darken-1" type="submit">Add Burger</button>
+  </div>
+</div>
