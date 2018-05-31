@@ -18,3 +18,25 @@ li {
     margin-bottom: 5px;
   }
   
+  body {
+    background-color: #343334;
+  }
+
+  #burgergif {
+    margin:0 auto;
+    width: 400px;
+  }
+/* 
+  button {
+    float: right;
+  } */
+
+  /* #notDevoured {
+    display: inline;
+    float: left;
+  }
+
+  #devoured {
+    display: inline;
+    float: right;
+  } */
