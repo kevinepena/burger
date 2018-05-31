@@ -36,13 +36,13 @@ $(function() {
         devoured: false
       };
 
-      if (state === "still") {
-        $("#burgergif").attr("src", $("#burgergif").attr("data-animate"));
-        $("#burgergif").attr("data-state", "animate")
-      } else {
-        $("#burgergif").attr("src", $("#burgergif").attr("data-still"));
-        $("#burgergif").attr("data-state", "still")
-      }
+      // if (state === "still") {
+      //   $("#burgergif").attr("src", $("#burgergif").attr("data-animate"));
+      //   $("#burgergif").attr("data-state", "animate")
+      // } else {
+      //   $("#burgergif").attr("src", $("#burgergif").attr("data-still"));
+      //   $("#burgergif").attr("data-state", "still")
+      // }
   
       // Send the POST request.
       $.ajax("/api/burgers", {
